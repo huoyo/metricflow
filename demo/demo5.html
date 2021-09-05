@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetricFlow</title>
+    <style>
+    </style>
+
+    <script src="../src/components/metricflow.min.js"></script>
+    <script>
+        window.onload = function () {
+            //控制连线位置
+            let options = {
+                'link-start-offsetx':15,
+                'link-start-offsety':-4,
+                'link-end-offsetx':-35,
+                'link-end-offsety':-4,
+            }
+            let metricFlow = MetricFlow("graph",options)
+
+            /*定义节点数据*/
+            let node1Data= {
+                "id":"primaryKey",
+                "title":{'name':"运行时间统计"},
+                "data":[
+                   {'name':'方法：IndexController#method1'},
+                   {'name':'平均耗时：0.333ms'},
+                 ]
+            };
+            /*在(20,200)坐标上创建一个节点*/
+            let node1 = metricFlow.createNode(node1Data,10,200);
+
+            let node2Data= {
+                "id":"primaryKey2", //节点的id不能相同，否则会被覆盖
+                "title":{'name':"运行时间统计"},
+                "data":[
+                    {'name':'方法：IndexController#method1'},
+                    {'name':'平均耗时：0.333ms'},
+                ]
+            };
+            /*在(20,200)坐标上创建一个节点*/
+            let node2 = metricFlow.createNode(node2Data,300,200);
+
+            /*连接两个节点*/
+            metricFlow.createLink(node1,node2);
+        }
+
+    </script>
+</head>
+<body>
+<!--定义一个画布 graph -->
+<div id="graph" height="700px" width="1100px" >
+</div>
+</body>
+</html>

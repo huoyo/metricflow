@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetricFlow</title>
+    <style>
+    </style>
+
+    <script src="../src/components/metricflow.min.js"></script>
+    <script>
+        window.onload = function () {
+
+            let metricFlow = MetricFlow("graph")
+
+            /*定义节点数据*/
+            let node1Data= {
+                "id":"primaryKey1",
+                "title":{'name':"A系统日志"},
+                "data":[
+                   {'name':'描述：从A系统抽取日志'},
+                   {'name':'抽取频率：一天一次'},
+                   {'name':'平均耗时：10s'},
+                   {'name':'状态：正常'}
+                 ]
+            };
+            let node1 = metricFlow.createNode(node1Data,30,100);
+
+            let node2Data= {
+                "id":"primaryKey2",
+                "title":{'name':"B系统日志",'background-color':'red'},
+                'border-color':'red',
+                "data":[
+                    {'name':'描述：从B系统抽取日志'},
+                    {'name':'抽取频率：一天一次'},
+                    {'name':'平均耗时：10m'},
+                    {'name':'状态：较慢'}
+                ]
+            };
+            let node2 = metricFlow.createNode(node2Data,30,300);
+
+            let node3Data= {
+                "id":"primaryKey3",
+                "title":{'name':"C系统日志"},
+                "data":[
+                    {'name':'描述：从C系统抽取日志'},
+                    {'name':'抽取频率：一天一次'},
+                    {'name':'平均耗时：5s'},
+                    {'name':'状态：正常'}
+                ]
+            };
+            let node3 = metricFlow.createNode(node3Data,30,500);
+
+            let node4Data= {
+                "id":"primaryKey4",
+                "title":{'name':"数据预处理"},
+                "data":[
+                    {'name':'描述：汇总各系统日志'},
+                    {'name':'平均耗时：20s'},
+                    {'name':'状态：正常'}
+                ]
+            };
+            let node4 = metricFlow.createNode(node4Data,500,300);
+
+            let node5Data= {
+                "id":"primaryKey5",
+                "title":{'name':"入库",'background-color':'red'},
+                'border-color':'red',
+                "data":[
+                    {'name':'描述：汇总各系统日志'},
+                    {'name':'平均耗时：30s'},
+                    {'name':'状态：较慢'}
+                ]
+            };
+            let node5 = metricFlow.createNode(node5Data,750,300);
+
+            /*连接两个节点*/
+            metricFlow.createLink(node1,node4);
+            metricFlow.createLink(node2,node4);
+            metricFlow.createLink(node3,node4);
+            metricFlow.createLink(node4,node5);
+        }
+
+    </script>
+</head>
+<body>
+<!--定义一个画布 graph -->
+<div id="graph" height="700px" width="1100px" >
+</div>
+</body>
+</html>
