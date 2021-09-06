@@ -9,7 +9,11 @@ MetricFlow是一个前端画图的javascript库，可用于构建可拖拽、可
 
 ## 展示
 
+[参考demo6.html](demo/demo6.html)
+
 ![demo6.html](docs/js.png)
+
+[参考demo7.html](demo/demo7.html)
 
 ![demo7.html](docs/js2.png)
 ## 文档
