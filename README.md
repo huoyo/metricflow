@@ -264,7 +264,7 @@ let metricFlow = MetricFlow("graph",options)
 
 ### 节点事件
 
-支持基本的鼠标事件，如`click`、`dblclick`、`mousedown`、`mouseup`等，事件在对应节点身上配置即可：
+支持基本的鼠标事件，如`click`、`dblclick`、`mousedown`、`mouseup`等，与原生js一致，事件在对应节点身上配置即可：
 
 ```javascript
 let node1Data= {
@@ -284,7 +284,7 @@ let node1Data= {
 
 ## 版本说明
 
-> V1.0：创建节点；连线；样式定义
+> V1.0：创建节点；连线；样式定义；鼠标事件
 
 ## 版权说明
 
