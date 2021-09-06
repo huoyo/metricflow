@@ -15,23 +15,23 @@
             /*定义节点数据*/
             let node1Data= {
                 "id":"primaryKey",
-                'border-color':'blue',
-                "title":{'name':"运行时间统计",'background-color':'blue'},
+                'border-color':'blue',//边框颜色
+                "title":{'name':"运行时间统计",'background-color':'blue'}, //标题背景颜色
                 "data":[
                    {'name':'方法：IndexController#method1'},
                    {'name':'平均耗时：0.333ms'},
                  ]
             };
-            /*在(20,200)坐标上创建一个节点*/
             let node1 = metricFlow.createNode(node1Data,10,200);
+
 
             let node2Data= {
                 "id":"primaryKey2", //节点的id不能相同，否则会被覆盖
-                'background-color':'#171515',
-                "title":{'name':"运行时间统计",'background-color':'#171515'},
+                'background-color':'#171515',//节点背景颜色
+                "title":{'name':"运行时间统计",'background-color':'#171515'},//标题背景颜色
                 "data":[
-                    {'name':'方法：IndexController#method1','background-color':'#171515'},
-                    {'name':'平均耗时：0.333ms','background-color':'#171515'},
+                    {'name':'方法：IndexController#method1','background-color':'#171515'},//第一个元素背景颜色
+                    {'name':'平均耗时：0.333ms','background-color':'#171515'},//第二个元素背景颜色
                 ]
             };
             /*在(20,200)坐标上创建一个节点*/
@@ -40,6 +40,7 @@
             let node3Data= {
                 'x':400,
                 'y':300,
+                'style':'font-size:10px',//设置字体
                 "id":"primaryKey3", //节点的id不能相同，否则会被覆盖
                 "title":{'name':"运行时间统计"},
                 "data":[

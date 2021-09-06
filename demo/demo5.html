@@ -11,10 +11,12 @@
         window.onload = function () {
             //控制连线位置
             let options = {
-                'link-start-offsetx':15,
-                'link-start-offsety':-4,
-                'link-end-offsetx':-35,
-                'link-end-offsety':-4,
+                'link-start-offsetx':1,//起始点向右偏移1个单位
+                'link-start-offsety':0,//起始点向上偏移0个单位
+                'link-end-offsetx':-5,//终点向左偏移5个单位
+                'link-end-offsety':0,
+                'link-width-offset':-1,//线段粗细减小1个单位
+                'link-color':"blue", //更改线段颜色
             }
             let metricFlow = MetricFlow("graph",options)
 
@@ -27,8 +29,8 @@
                    {'name':'平均耗时：0.333ms'},
                  ]
             };
-            /*在(20,200)坐标上创建一个节点*/
             let node1 = metricFlow.createNode(node1Data,10,200);
+
 
             let node2Data= {
                 "id":"primaryKey2", //节点的id不能相同，否则会被覆盖
@@ -38,10 +40,8 @@
                     {'name':'平均耗时：0.333ms'},
                 ]
             };
-            /*在(20,200)坐标上创建一个节点*/
-            let node2 = metricFlow.createNode(node2Data,300,200);
+            let node2 = metricFlow.createNode(node2Data,500,200);
 
-            /*连接两个节点*/
             metricFlow.createLink(node1,node2);
         }
 

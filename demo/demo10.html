@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetricFlow</title>
+    <style>
+    </style>
+
+<!--    <script src="../src/components/metricflow.min.js"></script>-->
+    <script src="../dev/metricflow.js"></script>
+
+    <script>
+        function sinclick(){
+            alert(1)
+        }
+        window.onload = function () {
+
+            let metricFlow = MetricFlow("graph")
+
+            /*定义节点数据*/
+            let nodes= {
+                "x":20,
+                "y":200,
+                "id":"node1",
+                "title":{'name':"运行时间统计"},
+                "data":[
+                    {'name':'方法：IndexController#method1'},
+                    {'name':'平均耗时：0.333ms'},
+                ],
+                "children":[
+                    {
+                        "id":"node2",
+                        "title":{'name':"运行时间统计"},
+                        "data":[
+                            {'name':'方法：IndexController#method1'},
+                            {'name':'平均耗时：0.333ms'},
+                        ]
+                    },
+                ]
+            };
+
+            metricFlow.createNodes(nodes);
+        }
+
+    </script>
+</head>
+<body>
+<!--定义一个画布 graph -->
+<div id="graph" height="700px" width="1100px" >
+</div>
+</body>
+</html>

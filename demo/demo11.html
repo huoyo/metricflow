@@ -7,13 +7,15 @@
     </style>
 
     <script src="../src/components/metricflow.min.js"></script>
+
     <script>
         window.onload = function () {
             let metricFlow = MetricFlow("graph")
             /*定义节点数据*/
             let node1Data= {
                 "id":"primaryKey",
-                "title":{'name':"运行时间统计"},
+                "title":{'name':"双击"},
+                'dblclick':"doubleClick",
                 "data":[
                    {'name':'方法：IndexController#method1'},
                    {'name':'平均耗时：0.333ms'},
@@ -25,7 +27,8 @@
             let node2Data= {
                 "id":"primaryKey2", //节点的id不能相同，否则会被覆盖
                 "from":'primaryKey',
-                "title":{'name':"运行时间统计"},
+                'click':"sinclick",
+                "title":{'name':"单击"},
                 "data":[
                     {'name':'方法：IndexController#method1'},
                     {'name':'平均耗时：0.333ms'},
@@ -34,8 +37,14 @@
             /*在(20,200)坐标上创建一个节点*/
             let node2 = metricFlow.createNode(node2Data,300,200);
 
-            /*连接两个节点*/
-            // metricFlow.createLink(node1,node2);
+        }
+
+        /*方法要放在window.onload = function () {}之外，否则有可能找不到*/
+        function sinclick(e){
+            alert("单击")
+        }
+        function doubleClick(e){
+            alert("双击")
         }
 
     </script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetricFlow</title>
+    <style>
+    </style>
+
+    <script src="../src/components/metricflow.min.js"></script>
+    <script>
+        window.onload = function () {
+            let options = {
+                'link-width-offset':-4,
+                'link-color':"lightblue"
+            };
+            let metricFlow = MetricFlow("graph",options)
+            /*定义节点数据*/
+            let node1Data= {
+                "id":"primaryKey",
+                "style":"border:1px solid lightblue;padding:10px;background-color:white",
+                "title":{'name':"白纸一张","style":"font-size:14px;background-color:white;color:black"},
+            };
+            metricFlow.createNode(node1Data,10,200);
+
+            let node2Data= {
+                "id":"primaryKey2",
+                "style":"border:1px solid lightblue;background-color:white",
+                "from":'primaryKey',
+                "title":{'name':"胸中无点墨","style":"font-size:14px;background-color:#4b804b;color:black"},
+                "data":[]
+            };
+            metricFlow.createNode(node2Data,200,400);
+
+            let node3Data= {
+                "id":"primaryKey3",
+                "from":'primaryKey2',
+                "style":"border:1px solid lightblue;background-color:white",
+                "title":{'name':"满腹经纶","style":"font-size:14px;background-color:#4b804b;color:black"},
+                "data":[
+                    {"name":"诗经","style":"font-size:13px;background-color:white;color:black"},
+                    {"name":"论语","style":"font-size:13px;background-color:white;color:black"},
+                    {"name":"孟子","style":"font-size:13px;background-color:white;color:black"},
+                    {"name":"庄子","style":"font-size:13px;background-color:white;color:black"}
+                ]
+            };
+            metricFlow.createNode(node3Data,500,100);
+
+            let node4Data= {
+                "id":"primaryKey4",
+                "style":"border:1px solid lightblue;background-color:white",
+                "from":'primaryKey3',
+                "title":{'name':"江郎才尽","style":"font-size:14px;background-color:#4b804b;color:black"},
+                "data":[
+                    {"name":"马什么梅","style":"font-size:13px;background-color:white;color:black"}
+                ]
+            };
+            metricFlow.createNode(node4Data,800,500);
+
+
+        }
+
+    </script>
+</head>
+<body>
+<!--定义一个画布 graph -->
+<div id="graph" height="700px" width="1100px" >
+</div>
+</body>
+</html>
