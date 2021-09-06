@@ -180,6 +180,16 @@ let metricFlow = MetricFlow("graph",options)
 
 ```
 
+自动创建的时候如果数据格式不匹配，又不想遍历处理，可传入函数调整
+
+```javascript
+function format(data){
+    data['value'] = data['value']+"ms";
+    return data;
+}
+metricFlow.createNodes(nodes,format);
+```
+
 [批量创建节点-demo9.html](demo/demo9.html)
 
 
