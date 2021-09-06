@@ -169,6 +169,17 @@ metricFlow.createNodes(nodes);
 
 ```
 
+自动创建的时候如果节点间距不合适，可调整
+
+```javascript
+let options = {
+                'node-distance-offsetx':5,//左右间距+5
+                'node-distance-offsety':-5//上下间距-5
+            };
+let metricFlow = MetricFlow("graph",options)
+
+```
+
 [批量创建节点-demo9.html](demo/demo9.html)
 
 
