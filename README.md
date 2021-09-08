@@ -100,7 +100,7 @@ let node2Data= {
     "x":300,
     "y":200,
     "id":"node2",
-    "from":"node1",
+    "from":"node1",//from的值可以是string 也可以是数组
     "title":{'name':"运行时间统计"},
     "data":[]
 };
