@@ -147,7 +147,7 @@ let node2 = metricFlow.createNode(node2Data);
 
 [批量创建节点-demo8.html](demo/demo8.html)
 
-第二种使用children属性创建，根节点的x和y需指定，其余子节点会自动向右排列
+第二种使用children属性创建，根节点的x和y需指定，其余子节点默认会自动向右排列
 
 ```javascript
 let nodes= {
@@ -180,11 +180,24 @@ let metricFlow = MetricFlow("graph",options)
 
 ```
 
+如果需要自动向下排列，可调整
+
+```javascript
+let options = {
+        "flow":"vertical" //horizontal水平排列  vertical垂直排列
+    };
+let metricFlow = MetricFlow("graph",options)
+
+```
+
+[垂直排列-demo12.html](demo/demo12.html)
+
+
 自动创建的时候如果数据格式不匹配，又不想遍历处理，可传入函数调整
 
 ```javascript
 function format(data){
-    data['value'] = data['value']+"ms";
+    data['title'] = {'name':"更改title的名字"};
     return data;
 }
 metricFlow.createNodes(nodes,format);
@@ -303,9 +316,12 @@ let node1Data= {
 [连线位置demo-demo11.html](demo/demo11.html)
 
 
+
 ## 版本说明
 
-> V1.0：创建节点；连线；样式定义；鼠标事件
+> V1.0.0：创建节点；连线；样式定义；鼠标事件
+>
+> V1.0.1：新增自动向下布局
 
 ## 版权说明
 

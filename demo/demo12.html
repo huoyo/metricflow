@@ -6,12 +6,18 @@
     <style>
     </style>
 
-    <script src="../src/components/metricflow.min.js"></script>
-<!--    <script src="../dev/metricflow.js"></script>-->
+<!--    <script src="metricflow.js"></script>-->
+    <script src="../src/components/metricflow-1.0.1.min.js"></script>
+    <!--    <script src="../dev/metricflow.js"></script>-->
     <script>
         window.onload = function () {
-            let options = {}
-            let metricFlow = MetricFlow("graph")
+            let options = {
+                "flow":"vertical", //horizontal水平排列  vertical垂直排列
+                'link-width-offset':-1,
+                'link-start-offsetx':0,
+                'link-color':"lightblue"
+            };
+            let metricFlow = MetricFlow("graph",options)
 
             /*定义节点数据*/
             let nodes= {
@@ -95,11 +101,7 @@
                 ]
             };
 
-            metricFlow.createNodes(nodes,format);
-        }
-        function format(data){
-            data['title'] = {'name':"更改title的名字"}
-            return data;
+            metricFlow.createNodes(nodes);
         }
 
     </script>
