@@ -20,6 +20,26 @@ MetricFlow是一个前端画图的javascript库，可用于构建可拖拽、可
 
 ### 快速上手
 
+#### 0.引入
+
+* 原生引入
+
+下载发行版本
+
+```html
+script src="metricflow.js"></script>-->
+```
+
+* npm安装
+
+>npm install metricflow
+
+
+```html
+let MetricFlow = require("metricflow")
+```
+
+
 #### 1. 创建画布
 
 创建画布只需要定义`div`标签即可，并声明画布的`width`和`height`
