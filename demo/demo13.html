@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetricFlow</title>
+    <style>
+    </style>
+
+<!--    <script src="metricflow.js"></script>-->
+    <script src="../src/components/metricflow-1.0.2.min.js"></script>
+    <!--    <script src="../dev/metricflow.js"></script>-->
+    <script>
+        let metricFlow;
+        window.onload = function () {
+            let options = {
+                // "flow":"horizontal",
+                'link-width-offset':-1,
+                'link-start-offsetx':0,
+                'link-color':"lightblue"
+            };
+            metricFlow = MetricFlow("graph",options)
+
+            /*定义节点数据*/
+            let nodes= {
+                "x":20,
+                "y":200,
+                "id":"node1",
+                "dblclick":"rightCick",
+                "title":{'name':"xx公司"},
+                "data":[
+                    {'name':'简介：xxxxxxx'},
+                ],
+                "children":[
+                    {
+                        "id":"node2",
+                        "title":{'name':"xx部门"},
+                        "data":[
+                            {'name':'简介：xxxxxxx'},
+                        ],
+                        "children":[
+                            {
+                                "id":"node42",
+                                "title":{'name':"xx中心"},
+                                "data":[
+                                    {'name':'简介：xxxxxxx'},
+                                ]
+                            },
+                            {
+                                "id":"node413",
+                                "title":{'name':"xx中心"},
+                                "data":[
+                                    {'name':'简介：xxxxxxx'},
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id":"node3",
+                        "title":{'name':"xx部门"},
+                        "data":[
+                            {'name':'简介：xxxxxxx'},
+                        ],
+                        "children":[
+                            {
+                                "id":"node4",
+                                "title":{'name':"xx中心"},
+                                "data":[
+                                    {'name':'简介：xxxxxxx'},
+                                ]
+                            },
+                            {
+                                "id":"node41",
+                                "title":{'name':"xx中心"},
+                                "data":[
+                                    {'name':'简介：xxxxxxx'},
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id":"node223",
+                        "title":{'name':"xx部门"},
+                        "data":[
+                            {'name':'简介：xxxxxxx'},
+                        ],
+                        "children":[
+                            {
+                                "id":"node224",
+                                "title":{'name':"xx中心"},
+                                "data":[
+                                    {'name':'简介：xxxxxxx'},
+                                ]
+                            },
+                            {
+                                "id":"node4221",
+                                "title":{'name':"xx中心del"},
+                                "data":[
+                                    {'name':'简介：xxxxxxx'},
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            };
+
+            metricFlow.createNodes(nodes,f);
+
+            function f(data) {
+                data['dblclick'] = 'rightCick'
+                return data
+            }
+        }
+
+        let anaMap  = new Map()
+        function rightCick(e) {
+            if (anaMap.has(e.currentTarget.id+"ana")) {
+                metricFlow.removeNode(e.currentTarget.id+"ana")
+                anaMap.delete(e.currentTarget.id+"ana")
+            }else {
+                let ana = {
+                    "id":e.currentTarget.id+"ana",
+                    "from":e.currentTarget.id,
+                    "style":"border:1px solid gray;background-color:white",
+                    "title":{'name':"入参数分析","style":"font-size:14px;background-color:gray;color:black"},
+                    "data":[
+                        {"name":"name,age：3.45 ms","style":"font-size:13px;background-color:white;color:black"},
+                        {"name":"sadbhsj,ryrtyr：3.45 ms","style":"font-size:13px;background-color:white;color:black"},
+                        {"name":"sadbhsj：3.45 ms","style":"font-size:13px;background-color:white;color:black"},
+                    ]
+                }
+                metricFlow.createNode(ana,e.x+100,e.y-20);
+                anaMap.set(e.currentTarget.id+"ana","")
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<!--定义一个画布 graph -->
+<div id="graph"  height="700px" width="1100px" >
+</div>
+</body>
+</html>

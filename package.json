@@ -1,0 +1,22 @@
+{
+  "name": "metricflow",
+  "version": "1.0.2",
+  "description": "a graph library for javascript",
+  "main": "metricflow.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/huoyo/metricflow.git"
+  },
+  "author": "Chang Zhang",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "metricflow": "^1.0.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "metricflow"
+  ]
+}
