@@ -5,6 +5,7 @@
 
 MetricFlow是一个前端画图的javascript库，可用于构建可拖拽、可灵活定义的数据流图、任务流图、知识图谱展示等
 
+> python版本请移步[ndraw](https://gitee.com/huoyo/ndraw.git)
 
 
 ## 展示
