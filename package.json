@@ -1,6 +1,6 @@
 {
   "name": "metricflow",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "a graph library for javascript",
   "main": "metricflow.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "Chang Zhang",
   "license": "Apache-2.0",
   "dependencies": {
-    "metricflow": "^1.0.1"
+    "metricflow": "^1.0.3"
   },
   "devDependencies": {},
   "keywords": [
