@@ -12,12 +12,8 @@ MetricFlow是一个前端画图的javascript库，可用于构建可拖拽、可
 
 [参考demo6.html](demo/demo6.html)
 
-![demo6.html](docs/js.png)
 
-[参考demo7.html](demo/demo7.html)
-
-![demo7.html](docs/js2.png)
-## 文档
+![输入图片说明](docs/demo6.png)
 
 ### 快速上手
 
@@ -69,8 +65,10 @@ let node1 = metricFlow.createNode(nodeData,10,200);
 /*metricFlow.createNode(nodeData);*/
 ```
 
-[创建节点demo-demo1.html](demo/demo1.html)
+[创建节点demo1.html](demo/demo1.html)
 
+
+![输入图片说明](docs/demo1.png)
 
 
 #### 3. 创建连线
@@ -129,8 +127,10 @@ let node2 = metricFlow.createNode(node2Data);
 ```
 
 [创建连线demo(两个节点)-demo2.html](demo/demo2.html)
+![输入图片说明](docs/demo2.png)
 
 [创建连线demo(三个节点)-demo3.html](demo/demo3.html)
+![输入图片说明](docs/demo3.png)
 
 #### 4. 批量创建节点
 
@@ -141,7 +141,7 @@ let node2 = metricFlow.createNode(node2Data);
             let metricFlow = MetricFlow("graph")
 
             /*定义节点数据*/
-            let node1Data= {
+               let node1Data= {
                 "x":20,
                 "y":200,
                 "id":"node1",
@@ -162,11 +162,25 @@ let node2 = metricFlow.createNode(node2Data);
                 "from":"node1",
                 "title":{'name':"节点3"}
             };
-            let nodes = [node1Data,node2Data,node3Data];
+            let node4Data= {
+                "x":500,
+                "y":200,
+                "id":"node4",
+                "from":['node2','node3'],
+                "title":{'name':"节点3"},
+                "data":[
+                    {'name':"1.xxxx"},
+                    {'name':"2.xxxx"},
+                ]
+            };
+            let nodes = [node1Data,node2Data,node3Data,node4Data];
             metricFlow.createNodes(nodes);
 ```
 
-[批量创建节点-demo8.html](demo/demo8.html)
+[批量创建节点-demo7.html](demo/demo7.html)
+
+![输入图片说明](docs/demo7.png)
+
 
 第二种使用children属性创建，根节点的x和y需指定，其余子节点默认会自动向右排列
 
@@ -189,6 +203,9 @@ let nodes= {
 metricFlow.createNodes(nodes);
 
 ```
+[批量创建节点-demo9.html](demo/demo9.html)
+
+![输入图片说明](docs/demo9.png)
 
 自动创建的时候如果节点间距不合适，可调整
 
@@ -231,14 +248,20 @@ metricFlow.createNodes(nodes,format);
 
 #### 1. 更改节点样式
 
-节点由三部分组成，分别是 标题、元素集和剩余的背景，每一个部分都支持两种样式定义方式：
-
-第一种是沿用了css的样式，在数据上添加`style`即可，如，更改整个节点的边框颜色和粗细：
+在节点上添加`style`属性即可
 
 ```javascript
 let node2Data= {
     "id":"node2",
-    "style":"border-color:red;border-width:2px;",
+    "style":{
+                    'border-color':'black',//边框颜色
+                    'title-color':'black',//标题背景颜色
+                    'title-font-color':'white',//标题字体颜色
+                    'title-font-size':'13px',//标题字体大小
+                    'data-color':'white',//数据背景颜色
+                    'data-font-size':'13px',//数据字体大小
+                    'data-font-color':'red',//数据字体颜色
+                }
     "title":{'name':"运行时间统计"},
     "data":[
        {'name':'方法：IndexController#method1'},
@@ -248,52 +271,27 @@ let node2Data= {
 ```
 
 
-第二种是提取了`background-color`和`border-color`两个样式，可以单独配置
+单个节点添加不方便可以批量
 
 ```javascript
-let node2Data= {
-    "id":"node2",
-    "background-color":"red",
-    "border-color":"red",
-    "title":{'name':"运行时间统计"},
-    "data":[
-       {'name':'方法：IndexController#method1'},
-       {'name':'平均耗时：0.333ms'},
-     ]
-};
+metricFlow.createNodes(nodeList,addColors);
+ function addColors(data) {
+        data['style'] = {
+            'border-color':'black',//边框颜色
+            'title-color':'black',//标题背景颜色
+            'title-font-color':'white',//标题字体颜色
+            'title-font-size':'13px',//标题字体大小
+            'data-color':'white',//数据背景颜色
+            'data-font-size':'13px',//数据字体大小
+            'data-font-color':'red',//数据字体颜色
+        }
+        return data
+    }
 ```
+
 
 [样式定义demo-demo4.html](demo/demo4.html)
 
-#### 2. 更改标题样式
-
-```javascript
-let node2Data= {
-    "id":"node2",
-    "title":{'name':"运行时间统计","style":"background-color:red;border-color:red;font-size:15px;"},
-    "data":[
-       {'name':'方法：IndexController#method1'},
-       {'name':'平均耗时：0.333ms'},
-     ]
-};
-```
-
-[样式定义demo-demo4.html](demo/demo4.html)
-
-#### 3. 更改元素样式
-
-```javascript
-let node2Data= {
-    "id":"node2",
-    "title":{'name':"运行时间统计"},
-    "data":[
-       {'name':'方法：IndexController#method1',"style":"font-size:10px;"},
-       {'name':'平均耗时：0.333ms',"style":"font-size:10px;"},
-     ]
-};
-```
-
-[样式定义demo-demo4.html](demo/demo4.html)
 
 
 ### 连线配置
