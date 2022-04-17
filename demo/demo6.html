@@ -6,7 +6,7 @@
     <style>
     </style>
 
-    <script src="../src/components/metricflow.min.js"></script>
+    <script src="../src/components/metricflow-1.0.4.min.js"></script>
     <script>
         window.onload = function () {
 
@@ -21,20 +21,27 @@
                    {'name':'抽取频率：一天一次'},
                    {'name':'平均耗时：10s'},
                    {'name':'状态：正常'}
-                 ]
+                 ],
+                "style":{
+                    'border-color':'blue',//边框颜色
+                    'title-color':'blue',//标题背景颜色
+                }
             };
             let node1 = metricFlow.createNode(node1Data,30,100);
 
             let node2Data= {
                 "id":"primaryKey2",
                 "title":{'name':"B系统日志",'background-color':'red'},
-                'border-color':'red',
                 "data":[
                     {'name':'描述：从B系统抽取日志'},
                     {'name':'抽取频率：一天一次'},
                     {'name':'平均耗时：10m'},
                     {'name':'状态：较慢'}
-                ]
+                ],
+                "style":{
+                    'border-color':'green',//边框颜色
+                    'title-color':'green',//标题背景颜色
+                }
             };
             let node2 = metricFlow.createNode(node2Data,30,300);
 
@@ -46,7 +53,11 @@
                     {'name':'抽取频率：一天一次'},
                     {'name':'平均耗时：5s'},
                     {'name':'状态：正常'}
-                ]
+                ],
+                "style":{
+                    'border-color':'#0f0e4e',//边框颜色
+                    'title-color':'#0f0e4e',//标题背景颜色
+                }
             };
             let node3 = metricFlow.createNode(node3Data,30,500);
 
@@ -63,13 +74,16 @@
 
             let node5Data= {
                 "id":"primaryKey5",
-                "title":{'name':"入库",'background-color':'red'},
-                'border-color':'red',
+                "title":{'name':"入库"},
                 "data":[
                     {'name':'描述：汇总各系统日志'},
                     {'name':'平均耗时：30s'},
                     {'name':'状态：较慢'}
-                ]
+                ],
+                "style":{
+                    'border-color':'#0f0e4e',//边框颜色
+                    'title-color':'#0f0e4e',//标题背景颜色
+                }
             };
             let node5 = metricFlow.createNode(node5Data,750,300);
 
