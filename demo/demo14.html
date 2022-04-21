@@ -7,7 +7,8 @@
     </style>
 
 <!--    <script src="metricflow.js"></script>-->
-    <script src="../src/components/metricflow-1.1.0.min.js"></script>    <!--    <script src="../dev/metricflow.js"></script>-->
+<!--    <script src="../dev/metricflow.js"></script>-->
+    <script src="../src/components/metricflow-1.1.0.min.js"></script>
     <script>
         let metricFlow;
         window.onload = function () {
@@ -66,12 +67,11 @@
                 let ana = {
                     "id":e.currentTarget.id+"ana",
                     "from":e.currentTarget.id,
-                    "style":"border:1px solid gray;background-color:white",
-                    "title":{'name':"入参数分析","style":"font-size:14px;background-color:gray;color:black"},
+                    "title":{'name':"入参数分析"},
                     "data":[
-                        {"name":"name,age：3.45 ms","style":"font-size:13px;background-color:white;color:black"},
-                        {"name":"sadbhsj,ryrtyr：3.45 ms","style":"font-size:13px;background-color:white;color:black"},
-                        {"name":"sadbhsj：3.45 ms","style":"font-size:13px;background-color:white;color:black"},
+                        {"name":"name,age：3.45 ms"},
+                        {"name":"name,age：3.45 ms"},
+                        {"name":"name,age：3.45 ms"}
                     ]
                 }
                 metricFlow.createNode(ana,e.x+100,e.y-20);

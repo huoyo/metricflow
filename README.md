@@ -266,7 +266,7 @@ let node2Data= {
                     'data-color':'white',//数据背景颜色
                     'data-font-size':'13px',//数据字体大小
                     'data-font-color':'red',//数据字体颜色
-                }
+                },
     "title":{'name':"运行时间统计"},
     "data":[
        {'name':'方法：IndexController#method1'},
@@ -319,6 +319,16 @@ let metricFlow = MetricFlow("graph",options)
 
 [连线位置demo-demo5.html](demo/demo5.html)
 
+
+
+### 禁止拖拽
+
+```javascript
+let options = {
+                'drag':false
+            };
+let metricFlow = MetricFlow("graph",options)
+```
 
 ### 节点事件
 
