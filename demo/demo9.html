@@ -6,11 +6,10 @@
     <style>
     </style>
 
-    <script src="../src/components/metricflow-1.0.4.min.js"></script>
+    <script src="../src/components/metricflow-1.1.0.min.js"></script>
 <!--    <script src="../dev/metricflow.js"></script>-->
     <script>
         window.onload = function () {
-            let options = {}
             let metricFlow = MetricFlow("graph")
 
             /*定义节点数据*/
@@ -98,7 +97,7 @@
             metricFlow.createNodes(nodes,format);
         }
         function format(data){
-            data['title'] = {'name':"更改title的名字"}
+            // data['title'] = {'name':"更改title的名字"}
             return data;
         }
 

@@ -6,7 +6,7 @@
     <style>
     </style>
 
-    <script src="../src/components/metricflow.min.js"></script>
+    <script src="../src/components/metricflow-1.1.0.min.js"></script>
     <script>
         window.onload = function () {
             //控制连线位置
@@ -15,8 +15,8 @@
                 'link-start-offsety':0,//起始点向上偏移0个单位
                 'link-end-offsetx':-5,//终点向左偏移5个单位
                 'link-end-offsety':0,
-                'link-width-offset':-1,//线段粗细减小1个单位
-                'link-color':"blue", //更改线段颜色
+                'link-width-offset':0//线段粗细减小1个单位
+                // 'link-color':"blue", //更改线段颜色
             }
             let metricFlow = MetricFlow("graph",options)
 

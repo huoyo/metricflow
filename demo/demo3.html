@@ -6,7 +6,7 @@
     <style>
     </style>
 
-    <script src="../src/components/metricflow-1.0.4.min.js"></script>
+    <script src="../src/components/metricflow-1.1.0.min.js"></script>
     <script>
         window.onload = function () {
 
@@ -33,7 +33,7 @@
                 ]
             };
             /*在(20,200)坐标上创建一个节点*/
-            let node2 = metricFlow.createNode(node2Data,400,100);
+            let node2 = metricFlow.createNode(node2Data,400,200);
 
             let node3Data= {
                 "id":"primaryKey3", //节点的id不能相同，否则会被覆盖
@@ -44,11 +44,11 @@
                 ]
             };
             /*在(20,200)坐标上创建一个节点*/
-            let node3 = metricFlow.createNode(node3Data,400,300);
+            let node3 = metricFlow.createNode(node3Data,400,400);
 
             /*连接两个节点*/
             metricFlow.createLink(node1,node2);
-            metricFlow.createLink(node1,node3);
+            metricFlow.createLink(node2,node3);
         }
 
     </script>
