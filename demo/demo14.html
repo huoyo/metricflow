@@ -8,13 +8,13 @@
 
 <!--    <script src="metricflow.js"></script>-->
 <!--    <script src="../dev/metricflow.js"></script>-->
-    <script src="../src/components/metricflow-1.1.0.min.js"></script>
+    <script src="../src/components/metricflow-1.1.1.min.js"></script>
     <script>
         let metricFlow;
         window.onload = function () {
             let options = {
                 "drag":true,
-                "flow":"vertical",
+                "flow":"vertical11",
                 'link-width-offset':0,
                 'link-start-offsetx':0,
             };
@@ -22,27 +22,36 @@
 
             /*定义节点数据*/
             let nodes= {
-                "x":20,
+                "x":100,
                 "y":200,
                 "id":"node1",
                 "dblclick":"rightCick",
-                "title":{'name':"xx公司"},
+                "title":{'name':"1"},
                 "data":[
-                    {'name':'简介：xxxxxxx'},
+                    {'name':'简介'},
                 ],
                 "children":[
                     {
                         "id":"node2",
-                        "title":{'name':"xx部门"},
+                        "title":{'name':"2"},
                         "data":[
-                            {'name':'简介：xxxxxxx'},
+                            {'name':'简介简xxxxxxxxx'},
+                            {'name':'简介简xxxxxxxxx'},
+                            {'name':'简介简xxxxxxxxx'},
                         ],
                         "children":[
                             {
                                 "id":"node42",
-                                "title":{'name':"xx中心"},
+                                "title":{'name':"3"},
                                 "data":[
-                                    {'name':'简介：xxxxxxx'},
+                                    {'name':'简介简简'},
+                                ]
+                            },
+                            {
+                                "id":"node43",
+                                "title":{'name':"3"},
+                                "data":[
+                                    {'name':'简介简简'},
                                 ]
                             }
                         ]

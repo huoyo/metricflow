@@ -15,8 +15,10 @@
                 'link-start-offsety':0,//起始点向上偏移0个单位
                 'link-end-offsetx':-5,//终点向左偏移5个单位
                 'link-end-offsety':0,
-                'link-width-offset':0//线段粗细减小1个单位
-                // 'link-color':"blue", //更改线段颜色
+                'link-width-offset':0,//线段粗细减小1个单位
+                'link-color':"blue", //更改线段颜色
+                'node-distance-offsetx': -55,//自动向右排列时 两节点之间距离-55
+                'node-distance-offsety': -55,//自动向下排列时 两节点之间距离-55
             }
             let metricFlow = MetricFlow("graph",options)
 

@@ -313,6 +313,8 @@ let options = {
                 'link-end-offsety':-1,
                 'link-width-offset':-1,//线段粗细减小1个单位
                 'link-color':"blue", //更改线段颜色
+                'node-distance-offsetx': -55,//自动向右排列时 两节点之间距离-55
+                'node-distance-offsety': -55,//自动向下排列时 两节点之间距离-55
             };
 let metricFlow = MetricFlow("graph",options)
 ```
