@@ -62,13 +62,13 @@
             metricFlow.createNodes(nodes,f);
 
             function f(data) {
-                data['dblclick'] = 'rightCick'
+                data['dblclick'] = 'dblClick'
                 return data
             }
         }
 
         let anaMap  = new Map()
-        function rightCick(e) {
+        function dblClick(e) {
             if (anaMap.has(e.currentTarget.id+"ana")) {
                 metricFlow.removeNode(e.currentTarget.id+"ana")
                 anaMap.delete(e.currentTarget.id+"ana")
