@@ -210,6 +210,7 @@ metricFlow.createNodes(nodes);
 ```
 [批量创建节点-demo9.html](demo/demo9.html)
 
+
 ![输入图片说明](docs/demo9.png)
 
 自动创建的时候如果节点间距不合适，可调整
