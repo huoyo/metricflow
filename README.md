@@ -296,7 +296,7 @@ metricFlow.createNodes(nodeList,addColors);
 ```
 
 
-[样式定义demo-demo4.html](demo/demo4.html)
+[样式定义demo-demo7.html](demo/demo7.html)
 
 
 

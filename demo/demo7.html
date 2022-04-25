@@ -48,9 +48,20 @@
                 ]
             };
             let nodes = [node1Data,node2Data,node3Data,node4Data];
-            metricFlow.createNodes(nodes);
+            metricFlow.createNodes(nodes,f);
+        }
 
-
+        function f(data) {
+            data['style'] = {
+                'border-color':'blue',//边框颜色
+                'title-color':'blue',//标题背景颜色
+                'title-font-color':'white',//标题字体颜色
+                'title-font-size':'13px',//标题字体大小
+                'data-color':'white',//数据背景颜色
+                'data-font-size':'13px',//数据字体大小
+                'data-font-color':'black',//数据字体颜色
+            }
+            return data
         }
 
     </script>
