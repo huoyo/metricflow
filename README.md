@@ -103,7 +103,9 @@ let node2Data= {
      ]
 };
 let node2 = metricFlow.createNode(node2Data);
-/*连接两个节点*/
+/*连接两个节点 连线的起始位置在哪个位置无需关心，会自动判断 比如目标节点在
+起始节点下方  那么连线从起始节点的下方开始到目标接线的上方位置
+*/
 metricFlow.createLink(node1,node2);
 ```
 

@@ -1,6 +1,6 @@
 {
   "name": "metricflow",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "a graph library for javascript",
   "main": "metricflow.js",
   "scripts": {
