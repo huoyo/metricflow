@@ -8,7 +8,7 @@
 
 <!--    <script src="metricflow.js"></script>-->
 <!--    <script src="../dev/metricflow.js"></script>-->
-    <script src="../src/components/metricflow-1.1.2.min.js"></script>
+    <script src="../src/components/metricflow-1.1.3.min.js"></script>
     <script>
         let metricFlow;
         window.onload = function () {
@@ -26,22 +26,24 @@
                 "y":200,
                 "id":"node1",
                 "dblclick":"rightCick",
-                "title":{'name':"1"},
-                "data":[
-                    {'name':'简介'},
-                ],
+                "title":{'name':"开始"},
                 "children":[
                     {
                         "id":"node2",
-                        "title":{'name':"2"},
+                        'style':{
+                            "border-width":'3px',
+                            "node-width":"80px",
+                            "node-height":"70px"
+                        },
+                        "title":{'name':"分开1"},
                         "data":[
-                            {'name':'1.xxxxxx'},
-                            {'name':'2.xxxxxx'},
+                            {'name':'1.xxx'},
+                            {'name':'2.xxx'},
                         ],
                         "children":[
                             {
                                 "id":"node42",
-                                "title":{'name':"3"},
+                                "title":{'name':"分开"},
                                 "data":[
                                     {'name':'简介简简'},
                                 ]

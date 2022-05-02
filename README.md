@@ -4,7 +4,7 @@
 ---
 
 <div >
-    <img src='https://shields.io/badge/version-1.1.0-green.svg'>
+    <img src='https://shields.io/badge/version-1.1.3-green.svg'>
     <img src='https://shields.io/badge/dependencies-javascript/css/html-blue.svg'>
     <img src='https://shields.io/badge/author-Chang Zhang-dbab09.svg'>
     <h4>MetricFlow是一个前端画图的javascript库，可用于构建可拖拽、可灵活定义的流程图、网络图、知识图谱展示等</h4>
@@ -262,6 +262,9 @@ metricFlow.createNodes(nodes,format);
 let node2Data= {
     "id":"node2",
     "style":{
+                    'node-width':'3px',//节点宽度 默认自适应，指定以后可固定 v1.1.3增加
+                    'node-height':'3px',//节点高度 默认自适应，指定以后可固定 v1.1.3增加
+                    'border-width':'3px',//边框厚度 v1.1.3增加
                     'border-color':'black',//边框颜色
                     'title-color':'black',//标题背景颜色
                     'title-font-color':'white',//标题字体颜色
