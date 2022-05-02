@@ -187,6 +187,7 @@ let node2 = metricFlow.createNode(node2Data);
 [批量创建节点-demo7.html](demo/demo7.html)
 
 ![输入图片说明](docs/demo7.png)
+![输入图片说明](docs/demo8.png)
 
 
 第二种使用children属性创建，根节点的x和y需指定，其余子节点默认会自动向右排列
