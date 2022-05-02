@@ -282,6 +282,7 @@ let node2Data= {
 };
 ```
 
+[样式定义demo-demo8.html](demo/demo8.html)
 
 单个节点添加不方便可以批量
 
