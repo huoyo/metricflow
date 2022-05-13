@@ -29,7 +29,7 @@
 下载发行版本
 
 ```html
-script src="metricflow.js"></script>-->
+script src="metricflow.js"></script>
 ```
 
 * npm安装
