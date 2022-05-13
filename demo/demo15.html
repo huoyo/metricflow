@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetricFlow</title>
+    <style>
+    </style>
+
+    <!--    <script src="metricflow.js"></script>-->
+    <!--    <script src="../dev/metricflow.js"></script>-->
+    <script src="../src/components/metricflow-1.1.4.min.js"></script>
+    <script>
+        let metricFlow;
+        window.onload = function () {
+            let options = {
+                "drag":true
+            };
+            metricFlow = MetricFlow("graph",options)
+            let node1 = {
+                "x": 300,
+                "y": 300,
+                "id": "node1",
+                "style": {
+                    "node-type": "circle",
+                    'border-width':'3px',//边框粗细
+                    'border-color':'#d9eee0',//边框颜色
+                    'title-color':'#145227',//标题背景颜色
+                },
+                "title": {'name': "小圆"}
+            }
+
+            let node2 = {
+                "x": 100,
+                "y": 280,
+                "from":"node1",
+                "id": "node2",
+                'style':{
+                    "node-type":"circle",
+                    "node-width":"65px",
+                    "node-height":"65px",
+                    'border-width':'3px',//边框粗细
+                    'border-color':'#d9eee0',//边框颜色
+                    'title-color':'#145227',//标题背景颜色
+                },
+                "title": {'name': "大一点的圆"}
+            }
+
+            let node3 = {
+                "x": 450,
+                "y": 200,
+                "from":"node1",
+                "id": "node3",
+                'style':{
+                    "node-type":"circle",
+                    "node-width":"70px",
+                    "node-height":"50px"
+                },
+                "title": {'name': "半椭圆"}
+            }
+            let node4 = {
+                "x": 300,
+                "y": 500,
+                "from":"node1",
+                "id": "node4",
+                'style':{
+                    "node-type":"rectangle",
+                    'border-color':'#526852',//边框颜色
+                    'title-color':'#526852',//标题背景颜色
+                },
+                "title": {'name': "矩形"}
+            }
+            metricFlow.createNodes([node1,node2,node3,node4]);
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+<!--定义一个画布 graph -->
+<div id="graph"  height="700px" width="1100px" >
+</div>
+</body>
+</html>
