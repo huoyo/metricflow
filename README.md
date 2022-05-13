@@ -20,6 +20,10 @@
 [参考demo6.html](demo/demo6.html)
 ![输入图片说明](docs/demo6.png)
 
+
+[参考demo15.html](demo/demo15.html)
+![输入图片说明](docs/demo15.png)
+
 ### 快速上手
 
 #### 0.引入
