@@ -267,7 +267,7 @@ metricFlow.createNodes(nodes,format);
 let node2Data= {
     "id":"node2",
     "style":{
-                    "node-type": "circle",//节点类型{metric,circle,rectangle} 默认为metric v1.1.3新增
+                    "node-type": "circle",//节点类型{metric,circle,rectangle} 默认为metric v1.1.4新增
                     'node-width':'3px',//节点宽度 默认自适应，指定以后可固定 v1.1.3增加
                     'node-height':'3px',//节点高度 默认自适应，指定以后可固定 v1.1.3增加
                     'border-width':'3px',//边框厚度 v1.1.3增加
