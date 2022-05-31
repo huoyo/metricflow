@@ -4,7 +4,7 @@
 ---
 
 <div >
-    <img src='https://shields.io/badge/version-1.1.3-green.svg'>
+    <img src='https://shields.io/badge/version-1.1.4-green.svg'>
     <img src='https://shields.io/badge/dependencies-javascript/css/html-blue.svg'>
     <img src='https://shields.io/badge/author-Chang Zhang-dbab09.svg'>
     <h4>MetricFlow是一个前端画图的javascript库，可用于构建可拖拽、可灵活定义的流程图、网络图、知识图谱展示等</h4>
@@ -30,7 +30,7 @@
 
 * 原生引入
 
-下载发行版本
+[下载](https://gitee.com/huoyo/metricflow/releases) 发行版本
 
 ```html
 <script src="metricflow.js"></script>
