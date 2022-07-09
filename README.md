@@ -366,7 +366,24 @@ let node1Data= {
 
 [节点事件demo-demo14.html](demo/demo14.html)
 
+### 主要api参考
 
+```
+创建节点：createNode(param, x, y)
+批量创建节点：createNodes(params)
+创建连接：createLink(sourceDom, targetDom)
+清除所有节点：clearAll()
+切换拖拽状态：switchDrag()
+绑定连线事件：bindLinkEvent(startNodeId,endNodeId,eventName,funcName)
+绑定节点事件：bindNodeEvent(nodeId,eventName,funcName)
+根据节点事件获取节点id：getNodeId(e)
+获取节点位置：getNodeXy(nodeId)
+获取节点信息：getNodeInfo(nodeId)
+设置节点颜色：setColor(nodeId,titleColor,borderColor)
+设置连线颜色：setLinkColor(startNodeId,endNodeId,color)
+设置标题：setTitle(nodeId,title)
+清除连线：removeLink(startNodeId,endNodeId)
+```
 
 ## 版本说明
 
