@@ -4,7 +4,7 @@
 ---
 
 <div >
-    <img src='https://shields.io/badge/version-1.1.4-green.svg'>
+    <img src='https://shields.io/badge/version-1.2.1-green.svg'>
     <img src='https://shields.io/badge/dependencies-javascript/css/html-blue.svg'>
     <img src='https://shields.io/badge/author-Chang Zhang-dbab09.svg'>
     <h4>MetricFlow是一个前端画图的javascript库，可用于构建可拖拽、可灵活定义的流程图、网络图、知识图谱展示等</h4>
@@ -383,6 +383,7 @@ let node1Data= {
 设置连线颜色：setLinkColor(startNodeId,endNodeId,color)
 设置标题：setTitle(nodeId,title)
 清除连线：removeLink(startNodeId,endNodeId)
+伸缩宽度（在原始基础上）：stretchWidth(nodeId,nodeWidth)
 ```
 
 ## 版本说明
