@@ -15,6 +15,11 @@
 > python版本请移步[ndraw](https://gitee.com/huoyo/ndraw.git)
 
 
+> 作者注：此项目是应用户要求从隔壁的[KoTime](https://gitee.com/huoyo/ko-time.git)家中抠出来的，我以为他们喜欢的是我的私生子KoTime，没想到只是问我要它脸上的BB霜，不知道是该难过还是该开心，因为都是我写的！
+> 
+> 另外本人是后端，基本上不写前端，如果有什么bug请issue我（不可以骂我），如果喜欢本项目，可以给我Star，这样我应该有动力继续优化！
+
+
 ## 展示
 
 [参考demo6.html](demo/demo6.html)
