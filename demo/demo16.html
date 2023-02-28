@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MetricFlow</title>
+    <style>
+    </style>
+
+<!--        <script src="metricflow.js"></script>-->
+<!--        <script src="../dev/metricflow.js"></script>-->
+    <script src="../src/components/metricflow-1.2.0.min.js"></script>
+    <script>
+        let metricFlow;
+        window.onload = function () {
+            let options = {
+
+                'link-width-offset':0,//线段粗细减小1个单位
+            };
+            metricFlow = MetricFlow("graph",options)
+            let node1 = {
+                "x": 300,
+                "y": 300,
+                "id": "node1",
+                "style": {
+                    "node-type": "circle",
+                    'border-width':'3px',//边框粗细
+                    'border-color':'#d9eee0',//边框颜色
+                    'title-color':'#145227',//标题背景颜色
+                },
+                "title": {'name': "开始"}
+            }
+
+            let node2 = {
+                "x": 500,
+                "y": 300,
+                "id": "node2",
+                'style':{
+                    'border-width':'4px',//边框粗细
+                    'border-color':'#059a37',//边框颜色
+                    'title-color':'#059a37',//标题背景颜色
+                },
+                "title": {'name': "大一点的圆"},
+                "data":[
+                    {'name':'方法：IndexController#method1'},
+                    {'name':'平均耗时：0.333ms'},
+                ]
+            }
+            let n1 = metricFlow.createNode(node1);
+            let n2 = metricFlow.createNode(node2);
+            metricFlow.createLink(n1,n2);
+            /*node1与node2的连线上绑定鼠标单击事件(一定要点中连线)*/
+            metricFlow.bindLinkEvent('node1', 'node2', 'onclick', 'menuClick');
+            /*node1与node2的连线上绑定鼠标右击事件*/
+            // metricFlow.bindLinkEvent('node1', 'node2', 'oncontextmenu', 'menuClick');
+
+        }
+
+        function menuClick(e){
+            /*获取线段id*/
+            let clickLineId = e.currentTarget.id;
+            alert(clickLineId)
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+<!--定义一个画布 graph -->
+<div id="graph"  height="700px" width="1100px" >
+</div>
+</body>
+</html>
