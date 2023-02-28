@@ -12,11 +12,7 @@
     <script>
         let metricFlow;
         window.onload = function () {
-            let options = {
-
-                'link-width-offset':0,//线段粗细减小1个单位
-            };
-            metricFlow = MetricFlow("graph",options)
+            metricFlow = MetricFlow("graph")
             let node1 = {
                 "x": 300,
                 "y": 300,
@@ -51,6 +47,7 @@
             /*node1与node2的连线上绑定鼠标单击事件(一定要点中连线)*/
             metricFlow.bindLinkEvent('node1', 'node2', 'onclick', 'menuClick');
             /*node1与node2的连线上绑定鼠标右击事件*/
+            /*支持基本的鼠标事件，如click、dblclick、mousedown、mouseup等*/
             // metricFlow.bindLinkEvent('node1', 'node2', 'oncontextmenu', 'menuClick');
 
         }
