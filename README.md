@@ -30,6 +30,9 @@
 [参考demo15.html](demo/demo15.html)
 ![输入图片说明](docs/demo15.png)
 
+[参考demo8.html](demo/demo8.html)
+![输入图片说明](docs/image.png)
+
 ### 快速上手
 
 #### 0.引入
